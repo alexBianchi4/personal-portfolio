@@ -1,0 +1,230 @@
+:root{
+    --gray:#282828; 
+    --blue:#3500D3;
+    --dark-blue:#240090;
+    --purple:#190061;
+    --dark-purple:#0C0032;
+    --java:url(https://freepngimg.com/thumb/java/5-2-java-png-clipart.png);
+  }
+  
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size:62.5%;
+  }
+  /** Basic styling for the site/background**/
+  body {
+    font-family: 'Source Code Pro', monospace;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    animation: background 40s linear infinite;
+    background: black;
+    background-image: linear-gradient(var(--gray) .1em, transparent .1em), linear-gradient(90deg, var(--gray) .1em, transparent .1em);
+    background-size: 5em 5em;
+  }
+  
+  .img{
+    width:20%;
+    height:20%;
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  /** Code for the navigation bar start**/
+  .nav-container{
+    display:flex;
+    position:fixed;
+    margin: 0 10%;
+    top: 0;
+    width:80%;
+    height:60px;
+    background: var(--purple);
+    border-radius:10px;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  .nav-links{
+    display:flex;
+    list-style:none;
+  }
+  
+  .nav-links li a{
+    text-decoration: none;
+    margin: 0 2vw;
+    color:white;
+    font-size:4em;
+  }
+  
+  .nav-links a:hover{
+    background:var(--dark-purple);
+    border-radius: 15px;
+  }
+  /** Code for the navigation bar end**/
+  
+  /** Code for the welcome section start**/
+  .welcome-section{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    width:60%;
+    height:40vh;
+    margin-left:20%;
+  }
+  
+  .typing-demo {
+    color:white;
+    width: 23ch;
+    animation: typing 4s steps(23), blink .5s infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: "Source Code Pro",monospace;
+    font-size: 5em;
+  }
+  /** Code for the welcome section end**/
+  
+  /** Code for the abbout section start**/
+  .about-section{
+    display:grid;
+    grid-gap:5%;
+    width:60%;
+    height:100vh;
+    margin-left:20%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  
+  .about-me{
+    font-size:2.5em;
+    color:white;
+    padding:1em;
+    grid-column: 1 / 3;
+  }
+  
+  .info-container{
+    display:flex
+    flex-direction:column;
+    color:white;
+    background:var(--purple);
+    border-radius:15px;
+    font-size:2.5em;
+    padding:1em;
+    animation: bounce 5s ease-in-out infinite;
+  }
+  
+  .skills-box{
+    display:flex;
+  }
+  /** Code for the About section end**/
+  
+  /** Code for the projects section start**/
+  .projects-container{
+    display:grid;
+    grid-gap:5%;
+    width:60%;
+    height:90vh;
+    margin-left:20%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+  
+  .projects-title{
+    font-size:4em;
+    color:white;
+    padding:1em;
+    grid-column: 1 / 4;
+    justify-self:center;
+  }
+  
+  .box{
+    justify-self:center;
+    width:100%;
+    height:100%;
+  }
+  
+  .project-img{
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit:cover;
+  }
+  /** Code for the projects section end**/
+  
+  /** Code for the contact section start**/
+  .contact-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100vh;
+    margin-left:20%;
+    padding: 0 2rem;
+    color: white;
+  }
+  
+  .contact-section h2{
+    font-size:4em;
+  }
+  
+  .contact-links{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 4rem;
+  }
+  /** Code for the contact section end**/
+  
+  /** animation for the typing effect**/
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+  
+  /** background animation**/
+  @keyframes background {
+    0% {
+      background-position: 50% 0%;
+    }
+    25% {
+      background-position: 100% 50%;
+    }
+    50% {
+      background-position: 50% 100%;
+    }
+    75% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 50% 0%;
+    }
+  }
+  
+  @keyframes bounce{
+    0% {
+      box-shadow: 0 5px 15px 0px var(--gray));
+      transform: translatey(0px);
+      z-index: -1;
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px var(--gray);
+      transform: translatey(-1.5em);
+      z-index: -1;
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px var(--gray);
+      transform: translatey(0px);
+      z-index: -1;
+    }
+  }
